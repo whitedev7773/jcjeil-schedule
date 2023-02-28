@@ -126,8 +126,13 @@ p.warning {
     color: red;
 }
 
-p.date {
-    font-size: 13px;
+p.check-update {
+    cursor: pointer;
+    background-color: #0059ff;
+    padding: 0px 6px 2px 6px;
+    border-radius: 5px;
+    color: white;
+    margin-left: 0px !important;
 }
 
 .about > p {
@@ -152,4 +157,16 @@ div.developer {
 
 #icon-link-box > a > p {
     margin-left: 10px;
+}
+
+div.update {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: -10px;
+}
+
+div.update > p {
+    margin: 10px;
+    font-size: 13px;
 }

@@ -3,6 +3,11 @@
 //     console.log(db.val()[1]);
 // })
 
+document.querySelector(".check-update").addEventListener("click", () => {
+    alert(`새로운 앱으로 업데이트를 시도합니다.\n업데이트 적용 시 Last Update가 변경되요.\n\n${document.querySelector(".date").innerHTML}`);
+    location.reload();
+});
+
 document.getElementById("reset-data").addEventListener("click", () => {
     if (confirm("선택 과목과 테마 등 기기에 저장된 모든 데이터를 초기화할까요?") == true) {
         localStorage.removeItem("3");
