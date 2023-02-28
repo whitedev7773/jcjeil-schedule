@@ -1,27 +1,37 @@
-var cacheName = "jcjeil-schedule-app";
-var _cache = [
-  './',
-  '../src',
-  '../color.css',
-  '../interactive.css',
-  '../style.css',
+const staticAssets=[
+    './',
+    './offline.html',
 ];
 
-/* 서비스 워커를 시작하고 앱 컨텐츠를 캐싱한다 - offline 작동 */
-self.addEventListener('install', function(e) {
-  e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      return cache.addAll(_cache);
-    })
-  );
-  self.skipWaiting();
+self.addEventListener('install', async event=>{
+    const cache = await caches.open('static-cache');
+    cache.addAll(staticAssets);
 });
 
-/* 오프라인시 리소스 fetch해서 앱이 작동하게끔 한다 */
-self.addEventListener('fetch', function(e) {
-  e.respondWith(
-    caches.match(e.request).then(function(response) {
-      return response || fetch(e.request);
-    })
-  );
+self.addEventListener('fetch', event => {
+    const req = event.request;
+    const url = new URL(req.url);
+
+    if(url.origin === location.url){
+        event.respondWith(cacheFirst(req));
+    } else {
+        event.respondWith(newtorkFirst(req));
+    }
 });
+
+async function cacheFirst(req){
+    const cachedResponse = caches.match(req);
+    return cachedResponse || fetch(req);
+}
+
+async function newtorkFirst(req){
+    const cache = await caches.open('dynamic-cache');
+
+    try {
+        const res = await fetch(req);
+        cache.put(req, res.clone());
+        return res;
+    } catch (error) {
+        return await cache.match(req);
+    }
+}

@@ -1,7 +1,9 @@
-window.onload = () => {
-  'use strict';
-  if ('serviceWorker' in navigator) {
+if('serviceWorker' in navigator){
+  try {
     navigator.serviceWorker.register('./sw.js');
+    console.log("Service Worker Registered");
+  } catch (error) {
+    console.log("Service Worker Registration Failed");
   }
 }
 
@@ -10,7 +12,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
   // 나중에 이벤트를 활성화하려고 보관한다.
   window.deferredPrompt = event;
   // 설치 버튼에 담긴 hidden 클래스를 제거한다. 
-  installButton.classList.toggle('hidden', false);
+  // divInstall.classList.toggle('hidden', false);
 });
 
 installButton.addEventListener('click', async () => {
@@ -28,7 +30,7 @@ installButton.addEventListener('click', async () => {
   // 이벤트 초기화. prompt()는 한번만 호출할 수 있다.
   window.deferredPrompt = null;
   // 설치 버튼 다시 숨기기
-  installButton.classList.toggle('hidden', true);
+  // divInstall.classList.toggle('hidden', true);
 
 });
 
