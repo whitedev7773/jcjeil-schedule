@@ -12,7 +12,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
   // 나중에 이벤트를 활성화하려고 보관한다.
   window.deferredPrompt = event;
   // 설치 버튼에 담긴 hidden 클래스를 제거한다. 
-  // divInstall.classList.toggle('hidden', false);
+  installButton.classList.toggle('hidden', false);
 });
 
 installButton.addEventListener('click', async () => {
@@ -30,7 +30,7 @@ installButton.addEventListener('click', async () => {
   // 이벤트 초기화. prompt()는 한번만 호출할 수 있다.
   window.deferredPrompt = null;
   // 설치 버튼 다시 숨기기
-  // divInstall.classList.toggle('hidden', true);
+  installButton.classList.toggle('hidden', true);
 
 });
 

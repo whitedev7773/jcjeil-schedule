@@ -2,7 +2,7 @@
     "name": "제일고 비공식 시간표",
     "short_name": "제일고 비공식 시간표",
     "description": "By. Giwon (3118 장기원)",
-    "start_url": "./index.html",
+    "start_url": "../../index.html",
     "icons": [
         {
             "src": "./src/icon_32.png",
