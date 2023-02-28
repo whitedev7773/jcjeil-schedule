@@ -1,0 +1,15 @@
+{
+    "short_name": "제일고 비공식 시간표",
+    "name": "제일고 비공식 시간표",
+    "start_url": "/3/index.html",
+    "icons": [
+        {
+            "src": "../src/icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "display": "standalone",
+    "theme_color": "#e7e9f2",
+    "background_color": "#e7e9f2"
+}

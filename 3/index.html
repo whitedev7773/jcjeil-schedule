@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
+    <link rel="icon" href="../src/icon.png">
+    <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../color.css">
     <link rel="stylesheet" href="../interactive.css">
@@ -176,6 +183,10 @@
             </div>
         </div>
     </div>
+    <div id="container"
+        style="width: 800px; padding: 25px; margin: auto; margin-top: 40px; margin-bottom: 40px; text-align: center;">
+        <h3>학교 급식 정보</h3>
+    </div>
     <div id="container" style="width: 800px; padding: 25px; margin: auto; margin-top: 40px; margin-bottom: 40px">
         <div style="display: flex; align-items: center;">
             <p id="tag">반 설정</p>
@@ -213,27 +224,38 @@
         </div>
     </div>
     <div id="container" style="width: 800px; padding: 25px; margin: auto; margin-top: 40px; margin-bottom: 40px; display: flex; justify-content: space-between;">
-        <div class="about">
-            <p class="title">제천제일고등학교 비공식 시간표</p>
-            <p class="warning">(변경된 시간표는 수정되어 표시되지 않습니다.)</p>
-            <p class="date">Last Updated: 2023-02-27</p>
-        </div>
-        <div class="develop">
-            <div>
-                <div>
-                    <p class="developer">Developed By Giwon [3118 장기원]</p>
-                </div>
-                <div style="margin-top: 20px">
-                    <a href="https://github.com/whitedev7773/jcjeil-schedule" target="_blank">
-                        <img src="../src/github.png" height="30px">
-                    </a>
-                    <a href="https://www.instagram.com/giwon_w.dev7773/" target="_blank">
-                        <img src="../src/instagram.png" height="30px">
-                    </a>
-                </div>
+        <div style="display: flex;">
+            <img src="../src/icon.png" height="100px" style="margin-right: 20px; border-radius: 30px; box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.123);">
+            <div class="about">
+                <p class="title">제천제일고등학교 비공식 시간표</p>
+                <p class="warning">(변경된 시간표는 수정되어 표시되지 않습니다.)</p>
+                <p class="date">Last Updated: 2023-02-28</p>
             </div>
+        </div>
+        <div style="display: flex; align-items: end;">
+            <a href="../open-source-licences.html" target="_blank">
+                <p class="date">오픈소스 라이선스</p>
+            </a>
+            <button id="installButton" class="hidden" style="margin-left: 10px">앱 설치</button>
+        </div>
+    </div>
+    <div id="container"
+        style="width: 800px; padding: 25px; margin: auto; margin-top: 40px; margin-bottom: 40px; text-align: center;">
+        <div class="developer">
+            <p style="font-weight: bold;">Developed By Giwon [3118 장기원]</p>
+        </div>
+        <div id="icon-link-box">
+            <a href="https://github.com/whitedev7773/jcjeil-schedule" target="_blank">
+                <img class="profile-icon" src="../src/github.png" height="25px">
+                <p>@whitedev7773</p>
+            </a>
+            <a href="https://www.instagram.com/giwon_w.dev7773/" target="_blank">
+                <img class="profile-icon" src="../src/instagram.png" height="25px">
+                <p>@giwon_w.dev7773</p>
+            </a>
         </div>
     </div>
 </body>
 <script type="module" src="./script.js"></script>
+<script type="module" src="./pwa-install.js"></script>
 </html>
