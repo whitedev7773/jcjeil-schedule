@@ -4,7 +4,7 @@
 // })
 
 document.querySelector(".check-update").addEventListener("click", () => {
-    alert(`새로운 앱으로 업데이트를 시도합니다.\n업데이트 적용 시 Last Update가 변경되요.\n\n${document.querySelector(".date").innerHTML}`);
+    alert(`새로운 앱으로 업데이트를 시도합니다.\n업데이트 적용 시 Last Updates 일자가 변경된 후 최대 10분내로 업데이트가 적용되요.\n\n${document.querySelector(".date").innerHTML}`);
     location.reload();
 });
 
@@ -92,7 +92,7 @@ subNameInput.addEventListener("input", (e) => {
 var common_subject = {
     "1": {  // 1반
         "2": { // 화요일
-            "3": "수정 테스트",  // 교시
+            "3": "과목미정",  // 교시
             "4": "과목미정",
         },
         "4": { // 목요일
