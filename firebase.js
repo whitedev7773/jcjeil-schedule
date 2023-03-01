@@ -4,17 +4,6 @@ import { getDatabase, ref, child, get } from "https://www.gstatic.com/firebasejs
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyCCk8Q24U4P2RWZiQs-YLtLgaiDaq_JsjM",
-    authDomain: "jcjeil-schedule.firebaseapp.com",
-    databaseURL: "https://jcjeil-schedule-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "jcjeil-schedule",
-    storageBucket: "jcjeil-schedule.appspot.com",
-    messagingSenderId: "913564419683",
-    appId: "1:913564419683:web:5b25d872a212092c90da56",
-};
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const dbRef = ref(getDatabase(app));
