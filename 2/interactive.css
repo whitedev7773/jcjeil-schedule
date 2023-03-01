@@ -1,0 +1,9 @@
+#vertical-line {
+    transition: all 0.2s ease-out;
+}
+#vertical-line:hover {
+    z-index: 10;
+    margin: 0px 10px 0px 10px;
+    transform: scale(103%, 103%);
+    box-shadow: 0px 0px 30px 0px #0000002a;
+}
