@@ -92,7 +92,7 @@ subNameInput.addEventListener("input", (e) => {
 var common_subject = {
     "1": {  // 1반
         "2": { // 화요일
-            "3": "과목미정",  // 교시
+            "3": "수정 테스트",  // 교시
             "4": "과목미정",
         },
         "4": { // 목요일
