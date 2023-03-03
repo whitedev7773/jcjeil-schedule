@@ -195,10 +195,32 @@
             </div>
         </div>
     </div>
-    <!-- <div id="container"
-        style="width: 800px; padding: 25px; margin: auto; margin-top: 40px; margin-bottom: 40px; text-align: center;">
-        <h3>학교 급식 정보</h3>
-    </div> -->
+    <div id="container" style="width: 800px; padding: 25px; margin: auto; margin-top: 40px; margin-bottom: 40px; text-align: center;">
+        <div style="display: flex; justify-content: space-around;">
+            <div id="loading" class="hidden">
+                <img src="./src/sync.png" height="30px" style="margin-bottom: 12px;">
+                <p>데이터 요청중...</p>
+            </div>
+            <div id="breakfast" class="cafeteria-box">
+                <p class="title">아침</p>
+                <div id="list"></div>
+            </div>
+            <hr>
+            <div id="lunch" class="cafeteria-box">
+                <p class="title">점심</p>
+                <div id="list"></div>
+            </div>
+            <hr>
+            <div id="dinner" class="cafeteria-box">
+                <p class="title">저녁</p>
+                <div id="list"></div>
+            </div>
+        </div>
+        <div style="margin-top: 20px; display: flex; justify-content: center; align-items: center">
+            <p style="margin-right: 30px;">급식 정보 확인</p>
+            <input id="date-select" type="date" value="2023-03-02">
+        </div>
+    </div>
     <div id="container" style="width: 800px; padding: 25px; margin: auto; margin-top: 40px; margin-bottom: 40px">
         <div style="display: flex; align-items: center;">
             <p id="tag">반 설정</p>
@@ -242,13 +264,13 @@
                 <p class="title">제천제일고등학교 비공식 시간표</p>
                 <p class="warning">(당일 변경된 시간표는 수정되어 표시되지 않습니다.)</p>
                 <div class="update">
-                    <p class="date">Last Updated: 2023-03-01</p>
+                    <p class="date">Last Updated: 2023-03-04 | V1.2</p>
                     <p class="check-update">🔄️업데이트 확인</p>
                 </div>
             </div>
         </div>
         <div style="display: flex; align-items: end;">
-            <a href="./open-source-licences.html" target="_blank">
+            <a href="../open-source-licences.html" target="_blank">
                 <p class="date">오픈소스 라이선스</p>
             </a>
             <button id="installButton" class="hidden" style="margin-left: 10px">앱 설치</button>
@@ -273,6 +295,8 @@
         </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="module" src="./pwa-install.js"></script>
 <script type="module" src="./script.js"></script>
+<script type="module" src="./cafeteria.js"></script>
 </html>

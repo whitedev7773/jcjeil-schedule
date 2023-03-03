@@ -11,7 +11,7 @@ p {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 #container {
@@ -82,7 +82,8 @@ select {
     height: 35px;
 }
 
-#class-select, #theme-select {
+#class-select,
+#theme-select {
     width: 100px;
     height: 35px;
 }
@@ -112,6 +113,14 @@ button {
     border-radius: 30px;
 }
 
+input[type="date"] {
+    font-family: 'NanumSquare', sans-serif;
+}
+
+hr {
+    opacity: 0.3;
+}
+
 #reset-data {
     color: white;
     background-color: #eb4d4b;
@@ -135,7 +144,7 @@ p.check-update {
     margin-left: 0px !important;
 }
 
-.about > p {
+.about>p {
     margin: 10px;
 }
 
@@ -148,14 +157,14 @@ div.developer {
     justify-content: center;
 }
 
-#icon-link-box > a {
+#icon-link-box>a {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0px 20px 0px 20px;
 }
 
-#icon-link-box > a > p {
+#icon-link-box>a>p {
     margin-left: 10px;
 }
 
@@ -166,7 +175,48 @@ div.update {
     margin-top: -10px;
 }
 
-div.update > p {
+div.update>p {
     margin: 10px;
     font-size: 13px;
+}
+
+div.cafeteria-box>p {
+    width: 100%;
+    text-align: center;
+}
+
+div.cafeteria-box>p.title {
+    width: 50%;
+    padding: 3px;
+    border-radius: 30px;
+    color: white;
+    margin-bottom: 10px;
+    background-color: #44bd32;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#breakfast,
+#lunch,
+#dinner,
+#loading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#loading>img {
+    animation: rotate 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
