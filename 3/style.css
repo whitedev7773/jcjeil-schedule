@@ -75,6 +75,13 @@ select {
     border-radius: 30px;
 }
 
+input[type="date"] {
+    border: none;
+    outline: none;
+    padding: 4px;
+    border-radius: 30px;
+}
+
 #subject-select {
     color: white;
     background-color: #6d6d6d !important;

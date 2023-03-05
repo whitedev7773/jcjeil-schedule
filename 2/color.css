@@ -60,6 +60,17 @@ body[data-theme="dark"] input[type='text'] {
 
 
 
+body[data-theme="light"] input[type="date"] {
+    background-color: #f5f5f5 !important;
+    color: black;
+}
+body[data-theme="dark"] input[type="date"] {
+    background-color: #575757 !important;
+    color: #b4b4b4;
+}
+
+
+
 body[data-theme="light"] .profile-icon {
     filter: invert(0%) sepia(90%) saturate(7500%) hue-rotate(347deg) brightness(105%) contrast(111%);
 }
